@@ -1,7 +1,7 @@
 #Container image that runs your code
 FROM rocker/r-base
 
-RUN Rscript -e "install.packages('rmarkdown','bookdown','pacman')"
+RUN Rscript -e "install.packages(c('rmarkdown','bookdown','pacman'))"
 
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.sh render.R /
