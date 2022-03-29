@@ -1,7 +1,7 @@
 # action.yml
-name: Github action for rmarkdown
+name: Github action for bookdown
 description: Renders pdf, tex or html documents out of rmarkdown files
-author: Luis Chaves
+author: Luis Chaves (Forked by Christian Kruse)
 inputs:
   input_file:
     description: input rmarkdown file (.Rmd)
@@ -18,7 +18,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.input_file }}
-    - ${{ inputs.output_format }}
 branding:
   icon: book
   color: green

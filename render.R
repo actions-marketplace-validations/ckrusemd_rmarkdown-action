@@ -1,3 +1,5 @@
 args = commandArgs(trailingOnly = TRUE)
-library(rmarkdown)
-render(args[1], output_format = args[2])
+#library(rmarkdown)
+library(bookdown)
+#render(args[1], output_format = args[2])
+bookdown::render_book(args[1])
