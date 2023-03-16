@@ -1,5 +1,5 @@
 #Container image that runs your code
-FROM rocker/r-base
+FROM ckrusemd/bookdown-action
 
 RUN TEMP_DEB="$(mktemp)" && wget -O "$TEMP_DEB" 'https://github.com/jgm/pandoc/releases/download/3.1.1/pandoc-3.1.1-1-amd64.deb' && dpkg -i "$TEMP_DEB" && rm -f "$TEMP_DEB"
 RUN apt-get update && apt-get -y install xml2 openssl libxml2 libxml2-dev libmariadb-dev libcurl4-gnutls-dev
